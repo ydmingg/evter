@@ -8,9 +8,6 @@ Evter 是一个事件管理器，用于管理事件。
 
 ```bash
 npm install https://github.com/ydmingg/evter.git
-cd vincijs
-npm install
-npm run dev
 
 ```
 
