@@ -7,7 +7,7 @@ Evter 是一个事件管理器，用于管理事件。
 ## 安装
 
 ```bash
-npm install https://github.com/ydmingg/evter.git
+npm install evter
 
 ```
 
