@@ -26,7 +26,7 @@ export default class Evter {
     }
 
     // 触发事件，调用所有绑定的回调函数
-    public emit<T extends any[]>(event: string, ...args: T): void {
+    public emit(event: string, ...args: any[]): void {
         const callbacks = this.events.get(event);
         if (callbacks) {
             callbacks.forEach(callback => {
@@ -55,8 +55,8 @@ export default class Evter {
     }
 
     // 注册一个只执行一次的回调函数
-    public once<T extends any[]>(event: string, callback: EventHandler): void {
-        const oneTimeCallback = (...args:T) => {
+    public once(event: string, callback: EventHandler): void {
+        const oneTimeCallback = (...args: any[]) => {
             this.off(event, oneTimeCallback);
             callback(...args);
         };
@@ -64,7 +64,7 @@ export default class Evter {
     }
 
     // 私有调用回调函数并处理错误
-    private invokeCallback<T extends any[]>(event: string, callback: EventHandler, args: T): void {
+    private invokeCallback(event: string, callback: EventHandler, args: any[]): void {
         try {
             callback(...args);
         } catch (error) {
