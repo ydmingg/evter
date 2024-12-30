@@ -69,9 +69,9 @@ console.log(evter.all());
 **Pull Request:**
 
 1. Fork 代码!
-2. 创建自己的分支: `git checkout -b feat/xxxx`
-3. 提交你的修改: `git commit -am 'feat(function): add xxxxx'`
-4. 推送您的分支: `git push origin feat/xxxx`
+2. 创建自己的分支: `git switch -c xxxx`
+3. 提交你的修改: `git commit -m 'feat(function): add xxxxx'`
+4. 推送您的分支: `git push origin xxxx`
 5. 提交`pull request`
 
 
